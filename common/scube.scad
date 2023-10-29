@@ -9,7 +9,7 @@ module scube(width=1, depth=1, height=1, radius=0.1)
 	translate([radius,radius,height-radius]) sphere(r=radius);
 	translate([radius,radius,radius]) cylinder(h=height-radius*2,r=radius);
 
-	translate([radius,depth-radius,radius]) scale([1,1,0.5]) sphere(r=radius);
+	translate([radius,depth-radius,radius]) sphere(r=radius);
 	translate([radius,depth-radius,height-radius]) sphere(r=radius);
 	translate([radius,depth-radius,radius]) cylinder(h=height-radius*2,r=radius);
 
