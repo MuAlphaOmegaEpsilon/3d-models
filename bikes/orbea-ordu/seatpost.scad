@@ -1,4 +1,4 @@
-$fn=100;
+$fn=150;
 
 module inner_teardrop_shape()
 {	translate([-23,0]) circle(d=6);
@@ -41,7 +41,7 @@ module inner_seatpost()
 
 SMX=1.00; // Scale multiplier for SX (scaling X-axis)
 SMY=1.30; // Scale multiplier for SY (scaling Y-axis)
-FULCRUM_01=160; OFF_01=0.0;          SX_01=1+.010*SMX; SY_01=1+.001*SMY; CSX_01=       1.000; CSY_01=       1.000;
+FULCRUM_01=160; OFF_01=-.000;        SX_01=1+.010*SMX; SY_01=1+.001*SMY; CSX_01=       1.000; CSY_01=       1.000;
 FULCRUM_02=100; OFF_02=-.600+OFF_01; SX_02=1+.005*SMX; SY_02=1+.002*SMY; CSX_02=CSX_01*SX_01; CSY_02=CSY_01*SY_01;
 FULCRUM_03=090; OFF_03=-.150+OFF_02; SX_03=1+.006*SMX; SY_03=1+.003*SMY; CSX_03=CSX_02*SX_02; CSY_03=CSY_02*SY_02;
 FULCRUM_04=080; OFF_04=-.210+OFF_03; SX_04=1+.007*SMX; SY_04=1+.004*SMY; CSX_04=CSX_03*SX_03; CSY_04=CSY_03*SY_03;
@@ -52,9 +52,9 @@ FULCRUM_08=045; OFF_08=-.280+OFF_07; SX_08=1+.014*SMX; SY_08=1+.008*SMY; CSX_08=
 FULCRUM_09=040; OFF_09=-.370+OFF_08; SX_09=1+.018*SMX; SY_09=1+.009*SMY; CSX_09=CSX_08*SX_08; CSY_09=CSY_08*SY_08;
 FULCRUM_10=035; OFF_10=-.460+OFF_09; SX_10=1+.022*SMX; SY_10=1+.010*SMY; CSX_10=CSX_09*SX_09; CSY_10=CSY_09*SY_09;
 FULCRUM_11=030; OFF_11=-.570+OFF_10; SX_11=1+.026*SMX; SY_11=1+.013*SMY; CSX_11=CSX_10*SX_10; CSY_11=CSY_10*SY_10;
-FULCRUM_12=025; OFF_12=-.680+OFF_11; SX_12=1+.032*SMX; SY_12=1+.016*SMY; CSX_12=CSX_11*SX_11; CSY_12=CSY_11*SY_11;
-FULCRUM_13=020; OFF_13=-.860+OFF_12; SX_13=1+.034*SMX; SY_13=1+.019*SMY; CSX_13=CSX_12*SX_12; CSY_13=CSY_12*SY_12;
-FULCRUM_14=015; OFF_14=-1.06+OFF_13; SX_14=1+.036*SMX; SY_14=1+.022*SMY; CSX_14=CSX_13*SX_13; CSY_14=CSY_13*SY_13;
+FULCRUM_12=025; OFF_12=-.700+OFF_11; SX_12=1+.032*SMX; SY_12=1+.016*SMY; CSX_12=CSX_11*SX_11; CSY_12=CSY_11*SY_11;
+FULCRUM_13=020; OFF_13=-.890+OFF_12; SX_13=1+.034*SMX; SY_13=1+.019*SMY; CSX_13=CSX_12*SX_12; CSY_13=CSY_12*SY_12;
+FULCRUM_14=015; OFF_14=-1.08+OFF_13; SX_14=1+.036*SMX; SY_14=1+.022*SMY; CSX_14=CSX_13*SX_13; CSY_14=CSY_13*SY_13;
 FULCRUM_15=015; OFF_15=-.000+OFF_14; SX_15=1+.038*SMX; SY_15=1+.025*SMY; CSX_15=CSX_14*SX_14; CSY_15=CSY_14*SY_14;
 FULCRUM_16=015; OFF_16=-.000+OFF_15; SX_16=1+.040*SMX; SY_16=1+.028*SMY; CSX_16=CSX_15*SX_15; CSY_16=CSY_15*SY_15;
 FULCRUM_17=015; OFF_17=-.000+OFF_16; SX_17=1+.042*SMX; SY_17=1+.040*SMY; CSX_17=CSX_16*SX_16; CSY_17=CSY_16*SY_16;
@@ -139,7 +139,7 @@ difference()
 
 *expander_plug();
 *saddle_holder();
-*seatpost();
+seatpost();
 *translate([-10,0,22]) cylinder(h=130, d=10);
 
 
@@ -149,7 +149,7 @@ difference()
 *translate([0,0,57]) cylinder(h=20.5,d=50);
 // Oblique construction lines
 *color("red") translate([-36.34,0,0]) rotate([0,-12,0]) translate([0,0,-10]) cylinder(d=0.1, h=100);
-*#color("red") translate([34.3,0,0]) rotate([0,-12,0]) translate([0,0,-10]) cylinder(d=0.1, h=100);
+*color("red") translate([34.3,0,0]) rotate([0,-12,0]) translate([0,0,-10]) cylinder(d=0.1, h=100);
 // Inner bounding box
 *cube([52,17.5,10], center=true);
 // Outer bounding box (5.5mm)
